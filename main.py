@@ -6,8 +6,11 @@ def add1(numbers):
     return (ADD)
 """
 def subtract1(numbers):
-    sub=0
-    for x in numbers:
+    sub=int(numbers[0])
+    for y in range(1,len(numbers)):
+        numbers1=numbers[y]
+    #numbers.reverse()
+    for x in numbers1:
         x=int(x)
         sub=sub-x
     return (sub)
@@ -19,7 +22,15 @@ def multiplication1(numbers):
         mul=x*mul
     return (mul)
 
-#def divide1(numbers):
+def division1(numbers):
+    div=int(numbers[0])
+    ddiv=[]
+    for y in range(1,len(numbers)):
+        ddiv.append(numbers[y])
+    for x in ddiv:
+        x=int(x)
+        div=div/x
+    return (div)
 
 
 print("Choose one of the options:")
@@ -27,7 +38,7 @@ print("0. Exit")
 print("1. Add")
 print("2. Subtract")
 print("3. Multiplication")
-print("4. Divide")
+print("4. Division")
 print()
 
 while (1):
@@ -43,8 +54,9 @@ while (1):
          #   print("The subtract of the numbers is equal to {}".format(subtract1(numbers)))
         elif choice == "3":
             print("The multiply of the numbers is equal to {}".format(multiplication1(numbers)))
-        #elif choice=="4":
-         #   print("The subtract of the numbers is equal to {}".format(divide1(numbers)))
+        elif choice=="4":
+            print("The division of the numbers is equal to {}".format(division1(numbers)))
 
     else:
         print("This option is invalid")
+
