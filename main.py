@@ -1,3 +1,13 @@
+class ANSI():
+    def background(code):
+        return "\33[{code}m".format(code=code)
+
+    def style_text(code):
+        return "\33[{code}m".format(code=code)
+
+    def color_text(code):
+        return "\33[{code}m".format(code=code)
+
 def add1(numbers):
     ADD=0
     for x in numbers:
@@ -33,30 +43,30 @@ def division1(numbers):
     return (div)
 
 
-print("Choose one of the options:")
-print("0. Exit")
-print("1. Add")
-print("2. Subtract")
-print("3. Multiplication")
-print("4. Division")
+print(ANSI.background(97) + ANSI.color_text(0) + ANSI.style_text(36) + "Choose one of the options:")
+print(ANSI.background(97) + ANSI.color_text(0) + ANSI.style_text(33) + "0. Exit")
+print(ANSI.background(97) + ANSI.color_text(0) + ANSI.style_text(33) + "1. Add")
+print(ANSI.background(97) + ANSI.color_text(0) + ANSI.style_text(33) + "2. Subtract")
+print(ANSI.background(97) + ANSI.color_text(0) + ANSI.style_text(33) + "3. Multiplication")
+print(ANSI.background(97) + ANSI.color_text(0) + ANSI.style_text(33) + "4. Division")
 print()
 
 while (1):
-    choice=input("Enter choice:")
+    choice=input(ANSI.background(97) + ANSI.color_text(0) + ANSI.style_text(35) + "Enter choice:")
     if choice=="0":
         quit()
     if choice in ("1" , "2" , "3" , "4"):
-        print("Enter your numbers:")
+        print(ANSI.background(97) + ANSI.color_text(0) + ANSI.style_text(34) + "Enter your numbers:")
         numbers=input().split()
         if choice=="1":
-            print("The sum of the numbers is equal to {}".format(add1(numbers)))
+            print(ANSI.background(97) + ANSI.color_text(0) + ANSI.style_text(0) + "The sum of the numbers is equal to {}".format(add1(numbers)))
         elif choice=="2":
-            print("The subtract of the numbers is equal to {}".format(subtract1(numbers)))
+            print(ANSI.background(97) + ANSI.color_text(0) + ANSI.style_text(0) + "The subtract of the numbers is equal to {}".format(subtract1(numbers)))
         elif choice == "3":
-            print("The multiply of the numbers is equal to {}".format(multiplication1(numbers)))
+            print(ANSI.background(97) + ANSI.color_text(0) + ANSI.style_text(0) + "The multiply of the numbers is equal to {}".format(multiplication1(numbers)))
         elif choice=="4":
-            print("The division of the numbers is equal to {}".format(division1(numbers)))
+            print(ANSI.background(97) + ANSI.color_text(0) + ANSI.style_text(0) + "The division of the numbers is equal to {}".format(division1(numbers)))
 
     else:
-        print("This option is invalid")
+        print(ANSI.background(97) + ANSI.color_text(0) + ANSI.style_text(31) + "This option is invalid")
 
