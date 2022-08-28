@@ -4,17 +4,17 @@ def add1(numbers):
         x=int(x)
         ADD=x+ADD
     return (ADD)
-"""
+
 def subtract1(numbers):
     sub=int(numbers[0])
+    subb=[]
     for y in range(1,len(numbers)):
-        numbers1=numbers[y]
-    #numbers.reverse()
-    for x in numbers1:
+        subb.append(numbers[y])
+    for x in subb:
         x=int(x)
         sub=sub-x
     return (sub)
-"""
+
 def multiplication1(numbers):
     mul=1
     for x in numbers:
@@ -50,8 +50,8 @@ while (1):
         numbers=input().split()
         if choice=="1":
             print("The sum of the numbers is equal to {}".format(add1(numbers)))
-        #elif choice=="2":
-         #   print("The subtract of the numbers is equal to {}".format(subtract1(numbers)))
+        elif choice=="2":
+            print("The subtract of the numbers is equal to {}".format(subtract1(numbers)))
         elif choice == "3":
             print("The multiply of the numbers is equal to {}".format(multiplication1(numbers)))
         elif choice=="4":
